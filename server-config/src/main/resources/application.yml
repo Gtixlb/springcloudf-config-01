@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: server-config        #eurelka server注册的name，唯一标识
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Gtixlb/SpringCloud-Config    #配置git创库地址
+          search-paths:       #配置仓库路径
+          username:           #访问git仓库的用户名
+          password:           #访问git仓库的用户密码
+      label: master           #配置仓库的分支
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
